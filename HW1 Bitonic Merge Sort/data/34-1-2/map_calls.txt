@@ -1,0 +1,15 @@
+#region irank jrank  MPI_call buffer_size ncalls total_time min_time max_time
+ipm_noregion 1 0 MPI_File_close 0 1 1.4997e-04 1.4997e-04 1.4997e-04
+ipm_noregion 0 0 MPI_File_close 0 1 1.5688e-04 1.5688e-04 1.5688e-04
+ipm_noregion 1 0 MPI_Comm_size 0 1 0.0000e+00 0.0000e+00 0.0000e+00
+ipm_noregion 0 0 MPI_Comm_size 0 1 9.5367e-07 9.5367e-07 9.5367e-07
+ipm_noregion 1 0 MPI_File_open 0 2 6.3860e-03 2.6050e-03 3.7811e-03
+ipm_noregion 0 0 MPI_File_open 0 2 3.9042e-02 2.6081e-03 3.6434e-02
+ipm_noregion 0 0 MPI_Comm_rank 0 1 2.1458e-06 2.1458e-06 2.1458e-06
+ipm_noregion 1 0 MPI_Comm_rank 0 1 1.9073e-06 1.9073e-06 1.9073e-06
+ipm_noregion 0 0 MPI_Bcast 4 1 9.5367e-07 9.5367e-07 9.5367e-07
+ipm_noregion 1 0 MPI_Bcast 4 1 9.5367e-07 9.5367e-07 9.5367e-07
+ipm_noregion 0 0 MPI_File_read_at 1073741824 1 1.4086e+00 1.4086e+00 1.4086e+00
+ipm_noregion 1 0 MPI_File_read_at 1073741824 1 1.4413e+00 1.4413e+00 1.4413e+00
+ipm_noregion 1 0 MPI_Init 0 1 0.0000e+00 0.0000e+00 0.0000e+00
+ipm_noregion 0 0 MPI_Init 0 1 0.0000e+00 0.0000e+00 0.0000e+00

@@ -1,0 +1,171 @@
+
+Large-scale Atomic/Molecular Massively Parallel Simulator - 2 Aug 2023 - Update 3
+
+Usage example: lmp_mpi -var t 300 -echo screen -in in.alloy
+
+List of command line options supported by this LAMMPS executable:
+
+-echo none/screen/log/both  : echoing of input script (-e)
+-help                       : print this help message (-h)
+-in none/filename           : read input from file or stdin (default) (-i)
+-kokkos on/off ...          : turn KOKKOS mode on or off (-k)
+-log none/filename          : where to send log output (-l)
+-mdi '<mdi flags>'          : pass flags to the MolSSI Driver Interface
+-mpicolor color             : which exe in a multi-exe mpirun cmd (-m)
+-cite                       : select citation reminder style (-c)
+-nocite                     : disable citation reminder (-nc)
+-nonbuf                     : disable screen/logfile buffering (-nb)
+-package style ...          : invoke package command (-pk)
+-partition size1 size2 ...  : assign partition sizes (-p)
+-plog basename              : basename for partition logs (-pl)
+-pscreen basename           : basename for partition screens (-ps)
+-restart2data rfile dfile ... : convert restart to data file (-r2data)
+-restart2dump rfile dgroup dstyle dfile ... 
+                            : convert restart to dump file (-r2dump)
+-reorder topology-specs     : processor reordering (-r)
+-screen none/filename       : where to send screen output (-sc)
+-skiprun                    : skip loops in run and minimize (-sr)
+-suffix gpu/intel/opt/omp   : style suffix to apply (-sf)
+-var varname value          : set index style variable (-v)
+
+OS: Linux "Ubuntu 22.04.4 LTS" 5.15.0-107-generic x86_64
+
+Compiler: GNU C++ 11.4.0 with OpenMP 4.5
+C++ standard: C++11
+MPI v3.1: Open MPI v5.0.1, package: Open MPI scteam06@head Distribution, ident: 5.0.1, repo rev: v5.0.1, Dec 20, 2023
+
+Accelerator configuration:
+
+OPENMP package API: OpenMP
+OPENMP package precision: double
+OpenMP standard: OpenMP 4.5
+
+Active compile time flags:
+
+-DLAMMPS_GZIP
+-DLAMMPS_SMALLBIG
+sizeof(smallint): 32-bit
+sizeof(imageint): 32-bit
+sizeof(tagint):   32-bit
+sizeof(bigint):   64-bit
+
+Available compression formats:
+
+Extension: .gz     Command: gzip
+Extension: .bz2    Command: bzip2
+Extension: .zst    Command: zstd
+Extension: .xz     Command: xz
+Extension: .lzma   Command: xz
+
+
+Installed packages:
+
+ADIOS ML-HDNNP ML-QUIP NETCDF OPENMP OPT VORONOI 
+
+List of individual style options included in this LAMMPS executable
+
+* Atom styles:
+
+atomic          body            charge          ellipsoid       hybrid          
+line            sphere          tri             
+
+* Integrate styles:
+
+respa           respa/omp       verlet          
+
+* Minimize styles:
+
+cg              fire/old        fire            hftn            quickmin        
+sd              
+
+* Pair styles:
+
+born            born/omp        buck            buck/coul/cut   
+buck/coul/cut/omp               buck/omp        coul/cut        coul/cut/omp    
+coul/debye      coul/debye/omp  coul/dsf        coul/dsf/omp    coul/wolf       
+coul/wolf/omp   reax            mesont/tpm      hdnnp           hybrid          
+hybrid/overlay  hybrid/scaled   lj/cut          lj/cut/coul/cut 
+lj/cut/coul/cut/omp             lj/cut/omp      lj/cut/opt      lj/expand       
+lj/expand/omp   morse           morse/omp       morse/opt       quip            
+soft            soft/omp        table           table/omp       yukawa          
+yukawa/omp      zbl             zbl/omp         zero            
+
+* Bond styles:
+
+hybrid          zero            
+
+* Angle styles:
+
+hybrid          zero            
+
+* Dihedral styles:
+
+hybrid          zero            
+
+* Improper styles:
+
+hybrid          zero            
+
+* KSpace styles:
+
+
+* Fix styles
+
+adapt           addforce        ave/atom        ave/chunk       ave/correlate   
+ave/grid        ave/histo       ave/histo/weight                ave/time        
+aveforce        balance         box/relax       deform          deposit         
+ave/spatial     ave/spatial/sphere              lb/pc           
+lb/rigid/pc/sphere              client/md       dt/reset        efield          
+enforce2d       evaporate       external        gravity         gravity/omp     
+halt            heat            indent          langevin        lineforce       
+momentum        move            nph             nph/omp         nph/sphere      
+nph/sphere/omp  npt             npt/omp         npt/sphere      npt/sphere/omp  
+nve             nve/limit       nve/noforce     nve/omp         nve/sphere      
+nve/sphere/omp  nvt             nvt/omp         nvt/sllod       nvt/sllod/omp   
+nvt/sphere      nvt/sphere/omp  pair            planeforce      press/berendsen 
+print           property/atom   recenter        restrain        setforce        
+spring          spring/chunk    spring/self     store/force     store/state     
+temp/berendsen  temp/rescale    thermal/conductivity            vector          
+viscous         wall/harmonic   wall/lj1043     wall/lj126      wall/lj93       
+wall/morse      wall/reflect    wall/region     wall/table      
+
+* Compute styles:
+
+aggregate/atom  angle           angle/local     angmom/chunk    bond            
+bond/local      centro/atom     centroid/stress/atom            chunk/atom      
+chunk/spread/atom               cluster/atom    cna/atom        com             
+com/chunk       coord/atom      count/type      mesont          dihedral        
+dihedral/local  dipole          dipole/chunk    displace/atom   erotate/sphere  
+erotate/sphere/atom             fragment/atom   global/atom     group/group     
+gyration        gyration/chunk  heat/flux       improper        improper/local  
+inertia/chunk   ke              ke/atom         msd             msd/chunk       
+omega/chunk     orientorder/atom                pair            pair/local      
+pe              pe/atom         pressure        property/atom   property/chunk  
+property/grid   property/local  rdf             reduce          reduce/chunk    
+reduce/region   slice           stress/atom     temp            temp/chunk      
+temp/com        temp/deform     temp/partial    temp/profile    temp/ramp       
+temp/region     temp/sphere     torque/chunk    vacf            vcm/chunk       
+voronoi/atom    
+
+* Region styles:
+
+block           cone            cylinder        ellipsoid       intersect       
+plane           prism           sphere          union           
+
+* Dump styles:
+
+atom            atom/adios      cfg             custom          custom/adios    
+grid            grid/vtk        image           local           movie           
+netcdf/mpiio    xyz             
+
+* Command styles
+
+angle_write     balance         change_box      create_atoms    create_bonds    
+create_box      delete_atoms    delete_bonds    box             kim_init        
+kim_interactions                kim_param       kim_property    kim_query       
+reset_ids       reset_atom_ids  reset_mol_ids   message         server          
+dihedral_write  displace_atoms  info            minimize        read_data       
+read_dump       read_restart    replicate       rerun           run             
+set             velocity        write_coeff     write_data      write_dump      
+write_restart   
+

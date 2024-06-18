@@ -1,0 +1,105 @@
+#proc areadef
+  rectangle: 1 1 6 4
+  xrange: -1 9
+  yrange: 0 2.28486e+01
+  xaxis.stubs: inc
+  yaxis.stubs: inc
+  xaxis.stubrange: 0 8
+  xaxis.stubvert: yes
+  xaxis.label: MPI rank
+  xaxis.labeldistance: 0.5
+  yaxis.label: time in seconds
+                                                                                
+#proc getdata
+data:
+0 0 2.17102e+02 2.00388e+02 6.19872e+00 2.28486e+01 194.2534 0.00063324 21.53163 11.078 1.3168 0.91329 0.012024 7.1525e-06 2.1458e-06 9.5367e-07 0 0 
+1 1 2.17100e+02 2.12192e+02 3.36399e+00 2.15888e+01 195.5112 14.848 21.24569 = 0.34289 0.91483 0.96879 1.90734e-05 3.0994e-06 0 0 0 
+2 4 2.17101e+02 2.13466e+02 2.44111e+00 3.27327e+00 213.82773 14.848 2.04779 = 1.2254 0.87966 0.046051 2.21728e-05 2.861e-06 0 0 0 
+3 7 2.17067e+02 2.13030e+02 2.85793e+00 3.17993e+00 213.88707 14.848 1.93668 = 1.2432 0.88246 0.043229 2.21731e-05 1.9073e-06 0 0 0 
+4 6 2.17067e+02 2.13263e+02 2.61870e+00 2.92593e+00 214.14107 14.848 1.86703 = 1.0589 0.88349 0.04182 3.00411e-05 2.861e-06 1.1921e-06 0 0 
+5 3 2.17093e+02 2.13090e+02 2.75473e+00 2.92107e+00 214.17193 14.848 1.65553 = 1.2655 0.87698 0.048729 2.59881e-05 2.1458e-06 0 0 0 
+6 2 2.17092e+02 2.13312e+02 2.56580e+00 2.77333e+00 214.31867 14.848 1.49422 = 1.2791 0.87663 0.049074 3.00404e-05 1.9073e-06 0 0 0 
+7 5 2.17101e+02 2.13540e+02 2.36689e+00 2.72201e+00 214.37899 14.848 1.51603 = 1.206 0.87883 0.046885 1.81198e-05 2.1458e-06 0 0 0 
+                                                                                
+ #proc bars
+  lenfield: 8
+  locfield: 2
+  color: red
+  legendlabel: MPI_File_close
+  barwidth: 0.444444444444444
+  outline: no
+  #saveas A
+ #proc bars
+  #clone: A
+  lenfield: 9
+  color: green
+  legendlabel: MPI_Sendrecv
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 10
+  color: blue
+  legendlabel: MPI_File_write_at
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 11
+  color: yellow
+  legendlabel: MPI_Gather
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 12
+  color: purple
+  legendlabel: MPI_File_read_at
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 13
+  color: coral
+  legendlabel: MPI_File_open
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 14
+  color: orange
+  legendlabel: MPI_Bcast
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 15
+  color: darkblue
+  legendlabel: MPI_Comm_rank
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 16
+  color: limegreen
+  legendlabel: MPI_Comm_size
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 17
+  color: skyblue
+  legendlabel: MPI_Init
+  stackfields: *
+                                                                                
+ #proc bars
+  #clone: A
+  lenfield: 18
+  color: claret
+  legendlabel: MPI_Finalize
+  stackfields: *
+                                                                                
+ 
+#proc legend
+  location: max+0.4 max
+  seglen: 0.3

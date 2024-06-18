@@ -1,0 +1,83 @@
+#proc areadef
+  rectangle: 1 1 6 6
+  frame: width=0.5 color=0.3
+  xrange: -1 4
+  yrange: -1 4
+  xaxis.stubs: inc
+  yaxis.stubs: inc
+  xaxis.stubrange: 0 
+  yaxis.stubrange: 0 
+  xaxis.stubvert: yes
+  xaxis.label: MPI_Rank
+  yaxis.label: MPI_Rank
+ 
+#proc rect
+ rectangle: -0.500000(s) -0.500000(s) 0.500000(s) 0.500000(s)
+ color: gray(0.70)
+
+#proc rect
+ rectangle: -0.500000(s) 0.500000(s) 0.500000(s) 1.500000(s)
+ color: gray(0.03)
+
+#proc rect
+ rectangle: -0.500000(s) 1.500000(s) 0.500000(s) 2.500000(s)
+ color: gray(0.03)
+
+#proc rect
+ rectangle: 0.500000(s) -0.500000(s) 1.500000(s) 0.500000(s)
+ color: gray(1.00)
+
+#proc rect
+ rectangle: 0.500000(s) 2.500000(s) 1.500000(s) 3.500000(s)
+ color: gray(0.03)
+
+#proc rect
+ rectangle: 1.500000(s) -0.500000(s) 2.500000(s) 0.500000(s)
+ color: gray(0.91)
+
+#proc rect
+ rectangle: 1.500000(s) 2.500000(s) 2.500000(s) 3.500000(s)
+ color: gray(0.03)
+
+#proc rect
+ rectangle: 2.500000(s) -0.500000(s) 3.500000(s) 0.500000(s)
+ color: gray(0.91)
+
+#proc rect
+ rectangle: 2.500000(s) 0.500000(s) 3.500000(s) 1.500000(s)
+ color: gray(0.02)
+
+#proc rect
+ rectangle: 2.500000(s) 1.500000(s) 3.500000(s) 2.500000(s)
+ color: gray(0.05)
+
+
+
+#proc legendentry:
+sampletype: symbol
+details: style=outline fillcolor=gray(0.00) shape=square linecolor=black
+ label: 1.843e-05 sec
+#proc legendentry:
+sampletype: symbol
+details: style=outline fillcolor=gray(0.20) shape=square linecolor=black
+ label: 1.475e-05 sec
+#proc legendentry:
+sampletype: symbol
+details: style=outline fillcolor=gray(0.40) shape=square linecolor=black
+ label: 1.106e-05 sec
+#proc legendentry:
+sampletype: symbol
+details: style=outline fillcolor=gray(0.60) shape=square linecolor=black
+ label: 7.374e-06 sec
+#proc legendentry:
+sampletype: symbol
+details: style=outline fillcolor=gray(0.80) shape=square linecolor=black
+ label: 3.687e-06 sec
+#proc legendentry:
+sampletype: symbol
+details: style=outline fillcolor=gray(1.00) shape=square linecolor=black
+ label: 0.000e+00 sec
+ 
+#proc legend
+location: max+0.5 max-0.5
+ 
